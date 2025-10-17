@@ -1,0 +1,22 @@
+{
+  "name": "Treino da Bia",
+  "short_name": "TreinoBia",
+  "description": "App de treino personalizado para a Bia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffebf3",
+  "theme_color": "#ff85b8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
