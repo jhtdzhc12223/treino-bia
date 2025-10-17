@@ -1,0 +1,165 @@
+:root {
+    --rosa-claro: #ffebf3;
+    --rosa-medio: #ffb6d5;
+    --rosa-escuro: #ff85b8;
+    --roxo-claro: #e6cfff;
+    --texto: #5a3d5c;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--rosa-claro);
+    color: var(--texto);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+header {
+    background: linear-gradient(to right, var(--rosa-medio), var(--roxo-claro));
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--sombra);
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px var(--sombra);
+    border-left: 5px solid var(--rosa-escuro);
+}
+
+.card.intro {
+    text-align: center;
+    background: linear-gradient(to right, white, var(--rosa-claro));
+}
+
+.card h2 {
+    color: var(--rosa-escuro);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.dia-treino {
+    margin-bottom: 25px;
+}
+
+.card-header {
+    background: linear-gradient(to right, var(--rosa-medio), var(--roxo-claro));
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+}
+
+.card-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.exercicios {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.exercicio {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--rosa-claro);
+}
+
+.exercicio:last-child {
+    border-bottom: none;
+}
+
+.exercicio.sub-item {
+    padding-left: 20px;
+    color: var(--texto);
+    opacity: 0.8;
+}
+
+.nome {
+    flex: 1;
+    font-weight: 500;
+}
+
+.series {
+    font-weight: bold;
+    color: var(--rosa-escuro);
+    min-width: 70px;
+    text-align: right;
+}
+
+.dica {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--rosa-claro);
+    border-radius: 8px;
+    font-style: italic;
+    border-left: 3px solid var(--rosa-escuro);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--rosa-escuro);
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .exercicio {
+        flex-direction: column;
+    }
+    
+    .series {
+        text-align: left;
+        margin-top: 5px;
+    }
+}
