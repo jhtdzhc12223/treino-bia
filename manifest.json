@@ -1,7 +1,7 @@
 {
   "name": "Treino da Bia",
   "short_name": "TreinoBia",
-  "description": "App de treino personalizado para a Bia",
+  "description": "App de treino personalizado para a Bia - Programa Seguro",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffebf3",
