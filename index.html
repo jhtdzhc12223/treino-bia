@@ -9,163 +9,186 @@
     <meta name="theme-color" content="#ff85b8">
 </head>
 <body>
+    <!-- Tela de carregamento -->
+    <div id="loading-screen" class="loading">
+        <div class="loading-content">
+            <h2>Carregando Treino...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <header>
-        <h1>💪 Treino da Bia</h1>
-        <p class="subtitulo">Mês 1 - Aprendizado e base muscular</p>
+        <div class="header-bg">
+            <div class="header-gradient"></div>
+        </div>
+        <h1>💖 Treino da Bia</h1>
+        <p class="subtitulo">Programa Seguro - Foco em Glúteos e Core</p>
     </header>
 
-    <div class="container">
-        <div class="card intro">
-            <h2>Objetivo do Mês</h2>
-            <p>Melhorar coordenação, ativar glúteos e peito, e queimar gordura.</p>
-        </div>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link active">📅 Meu Treino</a>
+        <a href="comentarios.html" class="nav-link">💬 Comentários</a>
+    </nav>
 
+    <div class="container">
+        <!-- Segunda-Feira: Inferiores Seguro -->
         <div class="dia-treino" id="segunda">
             <div class="card-header">
-                <h2>💥 Segunda – Peito, Ombro e Tríceps</h2>
+                <h2>🍑 Segunda – Pernas e Glúteos (SEGURO)</h2>
             </div>
             <div class="exercicios">
                 <div class="exercicio">
-                    <span class="nome">Crucifixo reto (Polia ou máquina)</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">1</span>
+                    <span class="nome">Agachamento Copo<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="SEGURANÇA MÁXIMA - peso frontal">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Supino reto com halteres</span>
-                    <span class="series">3x10</span>
+                    <span class="ordem">2</span>
+                    <span class="nome">Elevação Pélvica<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Excelente para glúteos sem coluna">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Crossover na polia alta</span>
-                    <span class="series">3x8</span>
+                    <span class="ordem">3</span>
+                    <span class="nome">Cadeira Extensora<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Isolamento seguro quadríceps">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Tríceps corda (polia)</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">4</span>
+                    <span class="nome">Flexora Deitada<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Posterior coxa sem compressão">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Tríceps banco</span>
-                    <span class="series">2x12</span>
-                </div>
-                <div class="dica">
-                    <p>Descanso: 45–60s entre séries.</p>
+                    <span class="ordem">5</span>
+                    <span class="nome">Panturrilha Sentado<br><small>4 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Amplitude completa">💡</span>
                 </div>
             </div>
         </div>
 
+        <!-- Terça-Feira: Superior + Core -->
         <div class="dia-treino" id="terca">
             <div class="card-header">
-                <h2>🍑 Terça – Pernas e Glúteos</h2>
+                <h2>💪 Terça – Superior + Core</h2>
             </div>
             <div class="exercicios">
                 <div class="exercicio">
-                    <span class="nome">Agachamento com peso corporal</span>
-                    <span class="series">3x10</span>
+                    <span class="ordem">1</span>
+                    <span class="nome">Crucifixo Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Peito seguro - foco 'empinar'">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Leg press</span>
-                    <span class="series">3x10</span>
+                    <span class="ordem">2</span>
+                    <span class="nome">Remada Baixa<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Costas sem compressão">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Elevação pélvica (Glute Bridge)</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">3</span>
+                    <span class="nome">Desenvolvimento Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Ombros seguro">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Mesa flexora</span>
-                    <span class="series">2x12</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Panturrilha sentada</span>
-                    <span class="series">3x15</span>
-                </div>
-                <div class="dica">
-                    <p>Dica: foco em controlar o movimento e "apertar o glúteo" na subida.</p>
+                    <span class="ordem">4</span>
+                    <span class="nome">Prancha Abdominal<br><small>3 x 30-45s | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Core seguro">💡</span>
                 </div>
             </div>
         </div>
 
+        <!-- Quarta-Feira: Cardio + Glúteos -->
+        <div class="dia-treino" id="quarta">
+            <div class="card-header">
+                <h2>🔥 Quarta – Cardio + Glúteos</h2>
+            </div>
+            <div class="exercicios">
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Esteira Inclinação<br><small>20min | Queima gordura</small></span>
+                    <span class="dica-icon" data-dica="Manter inclinação constante">💡</span>
+                </div>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Afundo Estático<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Glúteos seguro">💡</span>
+                </div>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Glúteo Polia Baixa<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Isolamento glúteo">💡</span>
+                </div>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Abdução Máquina<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Lateral glúteo">💡</span>
+                </div>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Cardio Bike<br><small>15min | Baixo impacto</small></span>
+                    <span class="dica-icon" data-dica="Manter ritmo constante">💡</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quinta-Feira: Superior + Core -->
         <div class="dia-treino" id="quinta">
             <div class="card-header">
-                <h2>🩵 Quinta – Costas, Bíceps e Abdômen</h2>
+                <h2>💪 Quinta – Superior + Core</h2>
             </div>
             <div class="exercicios">
                 <div class="exercicio">
-                    <span class="nome">Puxada frontal (pegada aberta)</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">1</span>
+                    <span class="nome">Supino Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Peito seguro">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Remada baixa</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">2</span>
+                    <span class="nome">Puxada Alta<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Costas largura">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Rosca martelo</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">3</span>
+                    <span class="nome">Elevação Lateral<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Ombros deltóide">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Rosca Scott (máquina)</span>
-                    <span class="series">2x10</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Prancha</span>
-                    <span class="series">3x30 seg</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Abdominal infra</span>
-                    <span class="series">3x15</span>
+                    <span class="ordem">4</span>
+                    <span class="nome">Abdominal Supra<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Sem coluna no chão">💡</span>
                 </div>
             </div>
         </div>
 
+        <!-- Sexta-Feira: Pernas Completo -->
         <div class="dia-treino" id="sexta">
             <div class="card-header">
-                <h2>🍑 Sexta – Pernas e Glúteos</h2>
+                <h2>🍑 Sexta – Pernas Completo</h2>
             </div>
             <div class="exercicios">
                 <div class="exercicio">
-                    <span class="nome">Agachamento sumô com halter</span>
-                    <span class="series">3x12</span>
+                    <span class="ordem">1</span>
+                    <span class="nome">Leg Press 45°<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="CUIDADO - amplitude reduzida">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Stiff (halteres)</span>
-                    <span class="series">3x10</span>
+                    <span class="ordem">2</span>
+                    <span class="nome">Stiff Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Posterior seguro">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Cadeira abdutora</span>
-                    <span class="series">4x12</span>
+                    <span class="ordem">3</span>
+                    <span class="nome">Agachamento Sumô<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Amplitude controlada">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Elevação pélvica</span>
-                    <span class="series">4x10</span>
+                    <span class="ordem">4</span>
+                    <span class="nome">Cadeira Flexora<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="Isolamento">💡</span>
                 </div>
                 <div class="exercicio">
-                    <span class="nome">Panturrilha em pé</span>
-                    <span class="series">3x10</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="dia-treino" id="sabado">
-            <div class="card-header">
-                <h2>❤️‍🔥 Sábado – Cardio leve + Abdômen</h2>
-            </div>
-            <div class="exercicios">
-                <div class="exercicio">
-                    <span class="nome">Caminhada ou escada</span>
-                    <span class="series">25–30 min</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Abdominal infra</span>
-                    <span class="series">2x12</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Prancha</span>
-                    <span class="series">3x30s</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Vácuo</span>
-                    <span class="series">4x10s</span>
-                </div>
-                <div class="exercicio">
-                    <span class="nome">Abdominal bicicleta</span>
-                    <span class="series">10 reps por lado</span>
+                    <span class="ordem">5</span>
+                    <span class="nome">Panturrilha Em Pé<br><small>4 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="Contração máxima">💡</span>
                 </div>
             </div>
         </div>
@@ -174,6 +197,15 @@
     <footer>
         <p>Feito com 💖 para a Bia</p>
     </footer>
+
+    <!-- Modal para dicas -->
+    <div id="dicaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Dica do Exercício</h3>
+            <p id="dicaTexto"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
