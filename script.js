@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('💖 Site do treino da Bia carregado!');
+    console.log('💝 Site do treino da Bia carregado!');
     
     // Remover tela de carregamento
     setTimeout(function() {
@@ -21,15 +21,37 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('completo');
             salvarProgresso();
             
-            // Feedback visual
+            // Feedback visual fofo
             if (this.classList.contains('completo')) {
                 this.style.transform = 'scale(1.02)';
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 300);
+                
+                // Efeito de confete visual
+                const confetti = document.createElement('div');
+                confetti.innerHTML = '🎉';
+                confetti.style.position = 'absolute';
+                confetti.style.fontSize = '1.5rem';
+                confetti.style.animation = 'confettiFall 1s ease-out';
+                this.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 1000);
             }
         });
     });
+    
+    // Adicionar estilo para confetti
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(50px) rotate(180deg); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
     
     // Modal para dicas
     const modal = document.getElementById('dicaModal');
@@ -115,9 +137,16 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('footer').prepend(contador);
         }
         
+        let emoji = '💝';
+        if (porcentagem >= 75) emoji = '🎉';
+        else if (porcentagem >= 50) emoji = '✨';
+        else if (porcentagem >= 25) emoji = '🌟';
+        
         contador.innerHTML = `
-            <div style="text-align: center; margin-bottom: 10px; padding: 10px; background: var(--preto); border-radius: 10px; border: 1px solid var(--rosa-escuro);">
-                <strong>📊 Progresso Semanal: ${completos}/${totalExercicios} (${porcentagem}%)</strong>
+            <div style="text-align: center; margin-bottom: 15px; padding: 15px; background: var(--rosa-suave); border-radius: 15px; border: 2px solid var(--rosa-claro);">
+                <strong>${emoji} Seu Progresso: ${completos}/${totalExercicios} (${porcentagem}%) ${emoji}</strong>
+                <br>
+                <small style="color: var(--texto-claro);">Você está indo maravilhosamente! 💖</small>
             </div>
         `;
     }
@@ -140,4 +169,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 100);
     }
+    
+    // Adicionar corações flutuantes no background
+    function criarCoracoes() {
+        const container = document.body;
+        for (let i = 0; i < 5; i++) {
+            const coracao = document.createElement('div');
+            coracao.innerHTML = '💖';
+            coracao.style.position = 'fixed';
+            coracao.style.fontSize = Math.random() * 20 + 15 + 'px';
+            coracao.style.left = Math.random() * 100 + 'vw';
+            coracao.style.top = Math.random() * 100 + 'vh';
+            coracao.style.opacity = '0.1';
+            coracao.style.zIndex = '-1';
+            coracao.style.animation = `flutuar ${Math.random() * 10 + 10}s infinite ease-in-out`;
+            coracao.style.animationDelay = Math.random() * 5 + 's';
+            container.appendChild(coracao);
+        }
+    }
+    
+    // Adicionar animação de flutuar
+    const flutuarStyle = document.createElement('style');
+    flutuarStyle.textContent = `
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+    `;
+    document.head.appendChild(flutuarStyle);
+    
+    criarCoracoes();
 });
