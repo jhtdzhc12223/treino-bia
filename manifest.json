@@ -1,11 +1,11 @@
 {
   "name": "Treino da Bia",
   "short_name": "TreinoBia",
-  "description": "App de treino personalizado para a Bia - Programa 100% Seguro para Lombar",
+  "description": "App de treino personalizado para a Bia - Programa 100% Seguro e Cheio de Carinho",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ff1493",
+  "background_color": "#ffe6f0",
+  "theme_color": "#ff85b8",
   "orientation": "portrait",
   "icons": [
     {
