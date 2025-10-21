@@ -1,15 +1,18 @@
-/* style.css */
+/* style.css - Tema Academia Rosa e Preta */
 :root {
-    --rosa-claro: #ffebf3;
-    --rosa-medio: #ffb6d5;
-    --rosa-escuro: #ff85b8;
-    --roxo-claro: #e6cfff;
-    --roxo-escuro: #d4b3ff;
-    --texto: #5a3d5c;
-    --texto-claro: #8a6b8c;
+    --rosa-escuro: #ff1493;
+    --rosa-medio: #ff69b4;
+    --rosa-claro: #ffb6c1;
+    --rosa-suave: #fff0f5;
+    --preto: #000000;
+    --preto-cinza: #1a1a1a;
+    --preto-claro: #2d2d2d;
+    --cinza-escuro: #404040;
+    --cinza: #666666;
+    --cinza-claro: #cccccc;
     --branco: #ffffff;
-    --sombra: rgba(255, 133, 184, 0.2);
-    --sombra-escura: rgba(90, 61, 92, 0.1);
+    --sombra-rosa: rgba(255, 20, 147, 0.3);
+    --sombra-preta: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -20,10 +23,11 @@
 }
 
 body {
-    background-color: var(--rosa-claro);
-    color: var(--texto);
+    background: linear-gradient(135deg, var(--preto-cinza) 0%, var(--preto) 100%);
+    color: var(--branco);
     line-height: 1.6;
     padding-bottom: 60px;
+    min-height: 100vh;
 }
 
 /* Tela de carregamento */
@@ -33,7 +37,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--rosa-claro);
+    background: var(--preto);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,10 +51,22 @@ body {
     padding: 20px;
 }
 
+.loading-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 .loading-bar {
     width: 100%;
     height: 6px;
-    background-color: var(--rosa-medio);
+    background-color: var(--preto-claro);
     border-radius: 3px;
     margin-top: 20px;
     overflow: hidden;
@@ -59,7 +75,7 @@ body {
 .loading-progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(to right, var(--rosa-escuro), var(--roxo-escuro));
+    background: linear-gradient(to right, var(--rosa-escuro), var(--rosa-medio));
     animation: loading 2s ease-in-out forwards;
 }
 
@@ -74,15 +90,19 @@ header {
 }
 
 .header-bg {
-    height: 180px;
+    height: 200px;
     overflow: hidden;
-    background: linear-gradient(to right, var(--rosa-escuro), var(--roxo-escuro));
+    background: linear-gradient(135deg, var(--preto) 0%, var(--rosa-escuro) 100%);
+    position: relative;
 }
 
-.header-gradient {
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--rosa-escuro), var(--roxo-escuro));
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="gym" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ff1493" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23gym)"/></svg>');
 }
 
 h1 {
@@ -90,12 +110,13 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     text-align: center;
     color: var(--branco);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 8px var(--sombra-preta);
     width: 100%;
     padding: 0 20px;
+    font-weight: 800;
 }
 
 .subtitulo {
@@ -105,43 +126,59 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 1.1rem;
     text-align: center;
-    color: var(--branco);
-    opacity: 0.9;
+    color: var(--rosa-claro);
     width: 100%;
     padding: 0 20px;
+    font-weight: 500;
 }
 
 .main-nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 0 15px;
+    gap: 15px;
 }
 
 .nav-link {
-    background-color: var(--branco);
-    color: var(--texto);
-    padding: 10px 20px;
-    margin: 0 10px;
+    background: var(--preto-claro);
+    color: var(--branco);
+    padding: 12px 25px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    border: 2px solid var(--rosa-medio);
-    box-shadow: 0 2px 8px var(--sombra);
+    border: 2px solid var(--rosa-escuro);
+    box-shadow: 0 4px 15px var(--sombra-preta);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--rosa-escuro), transparent);
+    transition: left 0.5s;
+}
+
+.nav-link:hover::before {
+    left: 100%;
 }
 
 .nav-link.active {
-    background: linear-gradient(to right, var(--rosa-escuro), var(--roxo-escuro));
+    background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-medio));
     color: var(--branco);
     border-color: transparent;
+    box-shadow: 0 6px 20px var(--sombra-rosa);
 }
 
 .nav-link:hover {
-    background-color: var(--rosa-escuro);
-    color: var(--branco);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px var(--sombra);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--sombra-rosa);
 }
 
 .container {
@@ -152,56 +189,97 @@ h1 {
 
 .dia-treino {
     margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card-header {
-    background: linear-gradient(to right, var(--rosa-escuro), var(--roxo-escuro));
+    background: linear-gradient(135deg, var(--rosa-escuro), var(--preto-claro));
     color: var(--branco);
-    padding: 15px;
+    padding: 18px;
     border-radius: 15px 15px 0 0;
     margin-bottom: 0;
-    box-shadow: 0 4px 12px var(--sombra);
+    box-shadow: 0 6px 20px var(--sombra-preta);
+    border-bottom: 3px solid var(--rosa-medio);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rosa-escuro), var(--rosa-medio), var(--rosa-escuro));
 }
 
 .card-header h2 {
     margin: 0;
     font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px var(--sombra-preta);
 }
 
 .exercicios {
-    background-color: var(--branco);
+    background: var(--preto-claro);
     border-radius: 0 0 15px 15px;
-    padding: 15px;
-    box-shadow: 0 4px 15px var(--sombra-escura);
-    border: 1px solid var(--rosa-medio);
+    padding: 20px;
+    box-shadow: 0 8px 25px var(--sombra-preta);
+    border: 2px solid var(--cinza-escuro);
     border-top: none;
+    position: relative;
+}
+
+.exercicios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--rosa-medio), transparent);
 }
 
 .exercicio {
     display: flex;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--rosa-claro);
+    padding: 15px;
+    border-bottom: 1px solid var(--cinza-escuro);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background: var(--preto-cinza);
 }
 
 .exercicio:hover {
-    background-color: var(--rosa-claro);
-    border-radius: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: var(--cinza-escuro);
+    transform: translateX(5px);
+    border-left: 3px solid var(--rosa-medio);
 }
 
 .exercicio:last-child {
     border-bottom: none;
+    margin-bottom: 0;
 }
 
 .ordem {
-    background-color: var(--rosa-escuro);
+    background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-medio));
     color: var(--branco);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -209,25 +287,29 @@ h1 {
     font-weight: bold;
     margin-right: 15px;
     flex-shrink: 0;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px var(--sombra-rosa);
 }
 
 .nome {
     flex: 1;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .nome small {
-    color: var(--texto-claro);
+    color: var(--cinza-claro);
     font-size: 0.85rem;
     display: block;
     margin-top: 5px;
+    font-weight: 400;
 }
 
 .dica-icon {
-    background-color: var(--roxo-escuro);
+    background: var(--rosa-escuro);
     color: var(--branco);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -235,21 +317,27 @@ h1 {
     margin-left: 10px;
     cursor: pointer;
     flex-shrink: 0;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 10px var(--sombra-rosa);
 }
 
 .dica-icon:hover {
-    background-color: var(--roxo-claro);
-    transform: scale(1.1);
+    background: var(--rosa-medio);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 5px 15px var(--sombra-rosa);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    color: var(--texto-claro);
+    padding: 25px;
+    margin-top: 40px;
+    color: var(--cinza-claro);
     font-weight: 500;
-    border-top: 1px solid var(--rosa-medio);
+    border-top: 2px solid var(--cinza-escuro);
+    background: var(--preto-cinza);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -5px 20px var(--sombra-preta);
 }
 
 /* Modal */
@@ -261,58 +349,80 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background-color: var(--branco);
+    background: linear-gradient(135deg, var(--preto-claro), var(--preto-cinza));
     margin: 15% auto;
-    padding: 20px;
+    padding: 25px;
     border: 2px solid var(--rosa-escuro);
-    border-radius: 15px;
+    border-radius: 20px;
     width: 80%;
     max-width: 500px;
     position: relative;
-    box-shadow: 0 5px 25px var(--sombra-escura);
+    box-shadow: 0 10px 30px var(--sombra-preta);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close {
-    color: var(--texto-claro);
+    color: var(--cinza-claro);
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
     transition: color 0.3s ease;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
 .close:hover {
-    color: var(--rosa-escuro);
+    color: var(--rosa-medio);
 }
 
 #dicaTexto {
     margin-top: 15px;
-    line-height: 1.5;
-    color: var(--texto);
+    line-height: 1.6;
+    color: var(--branco);
+    font-size: 1rem;
+    padding: 10px;
+    background: var(--preto);
+    border-radius: 10px;
+    border-left: 3px solid var(--rosa-medio);
 }
 
 /* Estilos para exercícios completos */
 .exercicio.completo {
-    background-color: var(--rosa-claro);
+    background: linear-gradient(135deg, var(--preto-cinza), var(--cinza-escuro));
     opacity: 0.8;
+    border-left: 3px solid var(--rosa-claro);
 }
 .exercicio.completo .ordem {
-    background-color: var(--roxo-escuro);
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-medio));
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .header-bg {
-        height: 150px;
+        height: 160px;
     }
     
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .subtitulo {
@@ -325,7 +435,7 @@ footer {
     }
     
     .nav-link {
-        width: 80%;
+        width: 90%;
         margin-bottom: 10px;
         text-align: center;
     }
@@ -333,6 +443,7 @@ footer {
     .exercicio {
         flex-direction: column;
         align-items: flex-start;
+        padding: 12px;
     }
     
     .ordem {
@@ -352,11 +463,11 @@ footer {
 
 @media (max-width: 480px) {
     .header-bg {
-        height: 130px;
+        height: 140px;
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     
     .card-header h2 {
@@ -369,5 +480,9 @@ footer {
     
     .nome small {
         font-size: 0.8rem;
+    }
+    
+    .exercicio {
+        padding: 10px;
     }
 }
