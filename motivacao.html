@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivação - Treino da Bia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#dc2626">
+</head>
+<body>
+    <header>
+        <div class="header-bg">
+            <div class="header-overlay"></div>
+            <div class="rose-decoration">🌹</div>
+        </div>
+        <h1>💝 Motivação</h1>
+        <p class="subtitulo">Razões especiais para cada treino! ✨</p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">📅 Meu Treino</a>
+        <a href="comentarios.html" class="nav-link">💬 Dicas Especiais</a>
+        <a href="motivacao.html" class="nav-link active">🌟 Motivação</a>
+    </nav>
+
+    <div class="container">
+        <!-- Mensagens Motivacionais -->
+        <div class="motivacao-grid">
+            <!-- Mensagem 1 -->
+            <div class="motivacao-card">
+                <div class="card-icon">💎</div>
+                <div class="motivacao-content">
+                    <h3>Seu Corpo, Seu Templo</h3>
+                    <p>Construa um corpo para se orgulhar, mas que apenas um homem especial possa tocar. Sua dedicação hoje é o alicerce do seu valor amanhã.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+
+            <!-- Mensagem 2 -->
+            <div class="motivacao-card">
+                <div class="card-icon">✨</div>
+                <div class="motivacao-content">
+                    <h3>Evolução com Essência</h3>
+                    <p>Treine para ser uma mulher diferente a cada dia, mas mantendo sua personalidade e charme únicos. A força física só realça a beleza interior.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+
+            <!-- Mensagem 3 -->
+            <div class="motivacao-card">
+                <div class="card-icon">🏆</div>
+                <div class="motivacao-content">
+                    <h3>Confiança Depositada</h3>
+                    <p>Prove para si mesma que cada elogio e cada voto de confiança que depositei em você valeram a pena. Sua determinação é a resposta.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+
+            <!-- Mensagem 4 -->
+            <div class="motivacao-card">
+                <div class="card-icon">🔑</div>
+                <div class="motivacao-content">
+                    <h3>Seu Tesouro Precioso</h3>
+                    <p>Construa um corpo que seja seu charme e seu tesouro, mas dê a chave apenas para quem merecer. Os tesouros mais valiosos são para quem sabe cuidar.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+
+            <!-- Mensagem Extra 5 -->
+            <div class="motivacao-card">
+                <div class="card-icon">💪</div>
+                <div class="motivacao-content">
+                    <h3>Força que Encanta</h3>
+                    <p>Cada gota de suor é uma pérola na coroa da sua determinação. A mulher forte que surge na academia é a mesma que conquista o mundo lá fora.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+
+            <!-- Mensagem Extra 6 -->
+            <div class="motivacao-card">
+                <div class="card-icon">👑</div>
+                <div class="motivacao-content">
+                    <h3>Rainha do Seu Próprio Reino</h3>
+                    <p>Você não está apenas levantando pesos, está construindo um trono. Cada repetição é um degrau a mais na escada do seu empoderamento.</p>
+                    <div class="motivacao-rose">🌹</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Frases Diárias -->
+        <div class="frase-diaria">
+            <div class="frase-header">
+                <div class="rose-small">🌹</div>
+                <h2>💫 Frase do Dia</h2>
+            </div>
+            <div class="frase-content">
+                <p id="fraseAtual">"Hoje você está mais forte que ontem, e amanhã será ainda mais forte que hoje."</p>
+                <button onclick="novaFrase()" class="btn-nova-frase">Nova Frase 🌹</button>
+            </div>
+        </div>
+
+        <!-- Contador de Progresso -->
+        <div class="contador-motivacional">
+            <div class="contador-header">
+                <div class="rose-small">🌹</div>
+                <h2>📈 Seu Progresso</h2>
+            </div>
+            <div class="contador-content">
+                <div class="contador-item">
+                    <span class="contador-numero" id="diasTreino">0</span>
+                    <span class="contador-texto">Dias de Treino</span>
+                </div>
+                <div class="contador-item">
+                    <span class="contador-numero" id="exerciciosCompletos">0</span>
+                    <span class="contador-texto">Exercícios Concluídos</span>
+                </div>
+                <div class="contador-item">
+                    <span class="contador-numero" id="metasAlcancadas">0</span>
+                    <span class="contador-texto">Metas Alcançadas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rose">🌹</div>
+        <p>Lembre-se: cada esforço te aproxima da mulher incrível que você está se tornando! 💝</p>
+    </footer>
+
+    <script src="script-motivacao.js"></script>
+</body>
+</html>
