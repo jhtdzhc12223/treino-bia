@@ -1,4 +1,562 @@
-/* Estilos para página de motivação */
+/* style.css - Tema Rosa Vermelha Elegante Completo */
+:root {
+    --rosa-vermelho: #dc2626;
+    --rosa-escuro: #b91c1c;
+    --rosa-medio: #ef4444;
+    --rosa-claro: #fca5a5;
+    --rosa-suave: #fecaca;
+    --rosa-pastel: #fef2f2;
+    --vermelho-escuro: #991b1b;
+    --branco: #ffffff;
+    --cinza-muito-claro: #f8fafc;
+    --cinza-claro: #e2e8f0;
+    --cinza: #cbd5e1;
+    --cinza-escuro: #64748b;
+    --texto: #1e293b;
+    --texto-claro: #475569;
+    --sombra-rosa: rgba(220, 38, 38, 0.2);
+    --sombra-rosa-media: rgba(220, 38, 38, 0.3);
+    --sombra-rosa-escura: rgba(220, 38, 38, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--branco) 100%);
+    color: var(--texto);
+    line-height: 1.6;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Padrão de rosas no fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="roses" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><text x="15" y="20" font-size="8" fill="%23fecaca" opacity="0.1" text-anchor="middle">🌹</text></pattern></defs><rect width="100" height="100" fill="url(%23roses)"/></svg>');
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Tela de carregamento */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--rosa-vermelho) 0%, var(--rosa-escuro) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+    max-width: 400px;
+    padding: 40px 30px;
+    background: var(--branco);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--sombra-rosa-escura);
+    margin: 20px;
+    border: 3px solid var(--rosa-claro);
+}
+
+.loading-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+    display: block;
+    filter: drop-shadow(0 2px 4px var(--sombra-rosa));
+}
+
+.loading-text {
+    color: var(--rosa-vermelho);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-shadow: 0 1px 2px var(--sombra-rosa);
+}
+
+.loading-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+    margin-top: 25px;
+    overflow: hidden;
+    border: 1px solid var(--rosa-claro);
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, var(--rosa-vermelho), var(--rosa-medio));
+    border-radius: 10px;
+    animation: loading 2s ease-in-out forwards;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+}
+
+/* Header com rosa vermelha */
+header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.header-bg {
+    height: 220px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--rosa-vermelho) 0%, var(--rosa-escuro) 100%);
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 30px var(--sombra-rosa-media);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="header-roses" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><text x="12.5" y="16" font-size="6" fill="%23ffffff" opacity="0.1" text-anchor="middle">🌹</text></pattern></defs><rect width="100" height="100" fill="url(%23header-roses)"/></svg>');
+}
+
+.rose-decoration {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    opacity: 0.3;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--branco);
+    text-shadow: 2px 2px 8px var(--sombra-rosa-escura);
+    width: 100%;
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--rosa-suave);
+    width: 100%;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+/* Navegação */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.nav-link {
+    background: var(--branco);
+    color: var(--texto);
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--rosa-claro);
+    box-shadow: 0 5px 20px var(--sombra-rosa);
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--rosa-suave), transparent);
+    transition: left 0.6s;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, var(--rosa-vermelho), var(--rosa-medio));
+    color: var(--branco);
+    border-color: transparent;
+    box-shadow: 0 8px 25px var(--sombra-rosa-media);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--sombra-rosa-media);
+    border-color: var(--rosa-medio);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dia-treino {
+    margin-bottom: 30px;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards com rosas */
+.card-header {
+    background: linear-gradient(135deg, var(--rosa-vermelho), var(--vermelho-escuro));
+    color: var(--branco);
+    padding: 20px 20px 20px 60px;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 0;
+    box-shadow: 0 8px 25px var(--sombra-rosa-media);
+    border-bottom: 3px solid var(--rosa-medio);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rosa-vermelho), var(--rosa-medio), var(--rosa-vermelho));
+}
+
+.rose-small {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px var(--sombra-rosa-escura);
+}
+
+.exercicios {
+    background: var(--branco);
+    border-radius: 0 0 15px 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px var(--sombra-rosa);
+    border: 2px solid var(--rosa-claro);
+    border-top: none;
+    position: relative;
+}
+
+.exercicios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rosa-medio), transparent);
+}
+
+/* Exercícios */
+.exercicio {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 2px dashed var(--rosa-claro);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background: var(--branco);
+    position: relative;
+}
+
+.exercicio:hover {
+    background: var(--rosa-pastel);
+    transform: translateX(8px);
+    border-left: 4px solid var(--rosa-vermelho);
+    box-shadow: 0 5px 15px var(--sombra-rosa);
+}
+
+.exercicio:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.ordem {
+    background: linear-gradient(135deg, var(--rosa-vermelho), var(--rosa-medio));
+    color: var(--branco);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px var(--sombra-rosa-media);
+    border: 2px solid var(--branco);
+}
+
+.nome {
+    flex: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--texto);
+}
+
+.nome small {
+    color: var(--texto-claro);
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+.dica-icon {
+    background: var(--rosa-vermelho);
+    color: var(--branco);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px var(--sombra-rosa-media);
+    border: 2px solid var(--branco);
+}
+
+.dica-icon:hover {
+    background: var(--rosa-medio);
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 6px 18px var(--sombra-rosa-media);
+}
+
+.descanso-info {
+    text-align: center;
+    padding: 30px;
+    color: var(--cinza-escuro);
+    font-style: italic;
+    background: var(--rosa-pastel);
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px dashed var(--rosa-claro);
+}
+
+/* Footer com rosa */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: var(--texto-claro);
+    font-weight: 500;
+    border-top: 2px solid var(--rosa-claro);
+    background: var(--branco);
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -5px 25px var(--sombra-rosa);
+    position: relative;
+}
+
+.footer-rose {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    opacity: 0.7;
+    animation: gentlePulse 4s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: scale(1.05) rotate(5deg); opacity: 0.9; }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(254, 242, 242, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--branco), var(--rosa-pastel));
+    margin: 15% auto;
+    padding: 30px;
+    border: 3px solid var(--rosa-vermelho);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 15px 40px var(--sombra-rosa-media);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close {
+    color: var(--texto-claro);
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.close:hover {
+    color: var(--rosa-vermelho);
+}
+
+.modal-rose {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+#dicaTexto {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: var(--texto);
+    font-size: 1.1rem;
+    padding: 15px;
+    background: var(--branco);
+    border-radius: 12px;
+    border-left: 4px solid var(--rosa-vermelho);
+    box-shadow: 0 3px 10px var(--sombra-rosa);
+}
+
+/* Exercícios completos */
+.exercicio.completo {
+    background: linear-gradient(135deg, var(--rosa-pastel), var(--rosa-suave));
+    opacity: 0.9;
+    border-left: 4px solid var(--rosa-medio);
+}
+.exercicio.completo .ordem {
+    background: linear-gradient(135deg, var(--rosa-medio), var(--rosa-claro));
+}
+
+/* Estilos para página de comentários */
+.comentario-item {
+    padding: 20px;
+    border-bottom: 1px solid var(--cinza-escuro);
+    background: var(--branco);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--rosa-vermelho);
+    transition: transform 0.3s ease;
+}
+
+.comentario-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--sombra-rosa);
+}
+
+.comentario-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.comentario-item h3 {
+    color: var(--rosa-vermelho);
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.comentario-item p {
+    line-height: 1.6;
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+/* ========== ESTILOS PARA PÁGINA DE MOTIVAÇÃO ========== */
+
 .motivacao-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -194,8 +752,74 @@
     animation: fadeIn 0.6s ease;
 }
 
-/* Responsividade para motivação */
+/* ========== RESPONSIVIDADE GERAL ========== */
+
 @media (max-width: 768px) {
+    .header-bg {
+        height: 180px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitulo {
+        font-size: 1rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .nav-link {
+        width: 90%;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 12px 24px;
+    }
+    
+    .exercicio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .ordem {
+        margin-bottom: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .dica-icon {
+        align-self: flex-end;
+        margin-top: 10px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+    
+    .rose-decoration {
+        right: 20px;
+        font-size: 2rem;
+    }
+    
+    .card-header {
+        padding: 15px 15px 15px 50px;
+    }
+    
+    .rose-small {
+        left: 15px;
+        font-size: 1.3rem;
+    }
+    
+    /* Responsividade para motivação */
     .motivacao-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -220,9 +844,61 @@
     .contador-numero {
         font-size: 2rem;
     }
+    
+    .loading-content {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+    
+    .loading-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .loading-icon {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .header-bg {
+        height: 160px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nome {
+        font-size: 1rem;
+    }
+    
+    .nome small {
+        font-size: 0.85rem;
+    }
+    
+    .exercicio {
+        padding: 12px;
+    }
+    
+    .loading-content {
+        padding: 25px 15px;
+    }
+    
+    .loading-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .loading-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Responsividade para motivação mobile */
     .motivacao-grid {
         grid-template-columns: 1fr;
     }
@@ -246,4 +922,33 @@
     .frase-header h2 {
         font-size: 1.3rem;
     }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--rosa-pastel);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--rosa-vermelho), var(--rosa-medio));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-vermelho));
+}
+
+/* Seleção de texto personalizada */
+::selection {
+    background: var(--rosa-vermelho);
+    color: var(--branco);
+}
+
+::-moz-selection {
+    background: var(--rosa-vermelho);
+    color: var(--branco);
 }
