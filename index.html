@@ -3,232 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas Especiais - Treino da Bia</title>
+    <title>Treino da Bia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#ff6b9d">
+    <meta name="theme-color" content="#dc2626">
 </head>
 <body>
+    <!-- Tela de carregamento -->
+    <div id="loading-screen" class="loading">
+        <div class="loading-content">
+            <div class="loading-icon">🌹</div>
+            <h2 class="loading-text">Preparando seu treino especial...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="header-bg">
             <div class="header-overlay"></div>
+            <div class="rose-decoration">🌹</div>
         </div>
-        <h1>💬 Dicas Especiais</h1>
-        <p class="subtitulo">Explicações detalhadas com todo carinho! 🎀</p>
+        <h1>💖 Treino da Bia</h1>
+        <p class="subtitulo">Programa Seguro - Feito com Carinho pra Você!</p>
     </header>
 
     <nav class="main-nav">
-        <a href="index.html" class="nav-link">📅 Meu Treino</a>
-        <a href="comentarios.html" class="nav-link active">💬 Dicas Especiais</a>
+        <a href="index.html" class="nav-link active">📅 Meu Treino</a>
+        <a href="comentarios.html" class="nav-link">💬 Dicas Especiais</a>
     </nav>
 
     <div class="container">
-        <!-- Comentários Segunda-Feira -->
-        <div class="dia-treino" id="comentarios-segunda">
+        <!-- Segunda-Feira: Inferiores Seguro -->
+        <div class="dia-treino" id="segunda">
             <div class="card-header">
+                <div class="rose-small">🌹</div>
                 <h2>🍑 Segunda – Pernas (Super Seguro!)</h2>
             </div>
             <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Agachamento Copo</h3>
-                    <p><strong>✨ Segurança máxima!</strong> O peso na frente do corpo reduz drasticamente a compressão na lombar comparado com a barra nas costas. Mantém o tronco ereto e o core ativado. Perfeito para quem quer cuidar das costas!</p>
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Agachamento Copo<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="✨ Segurança máxima! Peso frontal protege suas costas">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Cadeira Extensora</h3>
-                    <p><strong>💪 Isolamento seguro!</strong> Foca exclusivamente no quadríceps (frente da coxa) sem sobrecarregar joelhos ou lombar. Movimento controlado que permite trabalhar com boa carga de forma segura.</p>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Cadeira Extensora<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="💪 Foca na frente da coxa com total segurança">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Agachamento Pêndulo</h3>
-                    <p><strong>🦵 Alongamento inteligente!</strong> Excelente para alongar o quadríceps enquanto trabalha a força. A máquina guia o movimento, garantindo segurança e amplitude controlada.</p>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Agachamento Pêndulo<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🦵 Alonga suavemente a frente da coxa">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Flexora em Pé</h3>
-                    <p><strong>🌟 Posterior focado!</strong> Trabalha a parte de trás da coxa de forma isolada. Como é em pé, não há compressão lombar. Perfeito para definir o posterior com segurança.</p>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Flexora em Pé<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌟 Trabalha a parte de trás da coxa com cuidado">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Mesa Flexora</h3>
-                    <p><strong>🎀 Alongamento controlado!</strong> Alonga o posterior da coxa enquanto fortalece. A máquina permite movimento preciso sem risco de compensações perigosas para a lombar.</p>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Mesa Flexora<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Alonga delicadamente o posterior">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Panturrilha Sentado</h3>
-                    <p><strong>👟 Foco total!</strong> Trabalha as panturrilhas sem nenhum stress para as costas. Posição sentada elimina qualquer risco de sobrecarga lombar.</p>
+                <div class="exercicio">
+                    <span class="ordem">6</span>
+                    <span class="nome">Panturrilha Sentado<br><small>4 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="👟 Panturrilhas sem stress nas costas">💡</span>
                 </div>
             </div>
         </div>
 
-        <!-- Comentários Terça-Feira -->
-        <div class="dia-treino" id="comentarios-terca">
+        <!-- Terça-Feira: Superior + Core -->
+        <div class="dia-treino" id="terca">
             <div class="card-header">
+                <div class="rose-small">🌹</div>
                 <h2>💪 Terça – Superior + Core</h2>
             </div>
             <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Crucifixo Máquina</h3>
-                    <p><strong>🌸 Peitoral seguro!</strong> A máquina estabiliza completamente o movimento, permitindo focar no peitoral sem risco para ombros ou costas. Ideal para desenvolver "empinar" com segurança.</p>
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Crucifixo Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Máquina segura para peitoral">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Remada Baixa</h3>
-                    <p><strong>🌺 Costas forte!</strong> Fundamental para uma postura bonita. Trabalha as costas sem compressão vertebral. Costas fortes = lombar protegida!</p>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Remada Baixa<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="💖 Costas forte sem machucar">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Desenvolvimento Máquina</h3>
-                    <p><strong>💫 Ombros protegidos!</strong> Ao contrário do desenvolvimento com barra livre, a máquina guia o movimento e previne lesões nos ombros. Seguro e eficaz!</p>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Desenvolvimento Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Ombros com movimento guiado e seguro">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Prancha Abdominal</h3>
-                    <p><strong>🦋 Core inteligente!</strong> Fortalece o abdômen sem flexionar a coluna. Ativa o transverso abdominal - o músculo mais importante para proteger sua lombar.</p>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Prancha Abdominal<br><small>3 x 30-45s | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="💫 Core forte sem flexionar a coluna">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Bird Dog</h3>
-                    <p><strong>🐕 Estabilização profunda!</strong> Exercício fantástico para coordenação e estabilidade do core. Melhora o controle muscular sem impacto nas costas.</p>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Bird Dog<br><small>3 x 10-12 cada lado | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Estabilização delicada do core">💡</span>
                 </div>
             </div>
         </div>
 
-        <!-- Comentários Quarta-Feira -->
-        <div class="dia-treino" id="comentarios-quarta">
+        <!-- Quarta-Feira: Cardio + Glúteos -->
+        <div class="dia-treino" id="quarta">
             <div class="card-header">
+                <div class="rose-small">🌹</div>
                 <h2>🔥 Quarta – Cardio + Glúteos</h2>
             </div>
             <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Esteira Inclinação</h3>
-                    <p><strong>🚶‍♀️ Cardio seguro!</strong> Caminhada na inclinação queima calorias sem impacto nas articulações. Zero stress para a lombar e ótimo para o condicionamento.</p>
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Esteira Inclinação<br><small>20min | Queima gordurinhas</small></span>
+                    <span class="dica-icon" data-dica="🚶‍♀️ Caminhada suave na inclinação">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Afundo Estático</h3>
-                    <p><strong>🍑 Glúteos estáveis!</strong> Versão mais segura do afundo, com menos instabilidade. Excelente para ativar glúteos sem risco de desequilíbrios.</p>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Afundo Estático<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Glúteos sem instabilidade">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Glúteo Polia Baixa</h3>
-                    <p><strong>🎯 Isolamento perfeito!</strong> Um dos melhores exercícios para glúteos! A polia permite tensão constante no músculo alvo, com zero compressão lombar.</p>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Glúteo Polia Baixa<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🎯 Isolamento perfeito dos glúteos">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Abdução Máquina</h3>
-                    <p><strong>💖 Glúteo lateral!</strong> Foca no glúteo médio, importantíssimo para estabilidade pélvica e formato redondo do bumbum. Movimento completamente seguro.</p>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Abdução Máquina<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Trabalha o lateral do bumbum">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Cardio Bike</h3>
-                    <p><strong>🚴‍♀️ Zero impacto!</strong> Exercício cardiovascular perfeito para quem tem restrições lombares. Fortalece pernas e melhora condicionamento sem riscos.</p>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Cardio Bike<br><small>15min | Super suave</small></span>
+                    <span class="dica-icon" data-dica="🚴‍♀️ Zero impacto nas costas">💡</span>
                 </div>
             </div>
         </div>
 
-        <!-- Comentários Quinta-Feira -->
-        <div class="dia-treino" id="comentarios-quinta">
+        <!-- Quinta-Feira: Superior + Core -->
+        <div class="dia-treino" id="quinta">
             <div class="card-header">
+                <div class="rose-small">🌹</div>
                 <h2>💪 Quinta – Superior + Core</h2>
             </div>
             <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Supino Máquina</h3>
-                    <p><strong>💗 Peitoral estabilizado!</strong> A máquina elimina a necessidade de estabilização, permitindo focar 100% no peitoral. Seguro e eficiente para desenvolvimento.</p>
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Supino Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Peitoral seguro na máquina">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Puxada Alta</h3>
-                    <p><strong>🦋 Costas larga!</strong> Exercício fundamental para desenvolver as costas largas ("asa"). Movimento guiado que protege ombros e coluna.</p>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Puxada Alta<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="💖 Costas larga e postura bonita">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Elevação Lateral</h3>
-                    <p><strong>✨ Ombros delicados!</strong> Isola o deltóide lateral para ombros mais largos e definidos. Carga leve com alta repetição para desenvolvimento seguro.</p>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Elevação Lateral<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Ombros delicados com halteres">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Abdominal Supra</h3>
-                    <p><strong>🌟 Abdômen seguro!</strong> Versão do abdominal que não flexiona a coluna excessivamente. Trabalha o reto abdominal com movimento controlado.</p>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Abdominal Supra<br><small>3 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="🌟 Abdômen sem forçar as costas">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Prancha com Apoio nos Joelhos</h3>
-                    <p><strong>🎀 Versão acessível!</strong> Perfeita para quem está começando! Reduz a carga em 50%, permitindo focar na técnica e construir força gradualmente.</p>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Prancha com Apoio nos Joelhos<br><small>3 x 30-45s | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Versão mais fácil e gostosa">💡</span>
                 </div>
             </div>
         </div>
 
-        <!-- Comentários Sexta-Feira -->
-        <div class="dia-treino" id="comentarios-sexta">
+        <!-- Sexta-Feira: Pernas Completo -->
+        <div class="dia-treino" id="sexta">
             <div class="card-header">
+                <div class="rose-small">🌹</div>
                 <h2>🍑 Sexta – Pernas Completo</h2>
             </div>
             <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Leg Press 45°</h3>
-                    <p><strong>⚠️ Atenção especial!</strong> <strong>NUNCA</strong> desça até o final! Amplitude reduzida protege os discos lombares. Excelente para quadríceps quando feito com cuidado.</p>
+                <div class="exercicio">
+                    <span class="ordem">1</span>
+                    <span class="nome">Leg Press 45°<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="⚠️ Atenção: não desça até o final!">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Stiff Máquina</h3>
-                    <p><strong>💫 Posterior alongado!</strong> Versão segura do stiff tradicional. A máquina controla o movimento, alongando o posterior sem sobrecarregar a lombar.</p>
+                <div class="exercicio">
+                    <span class="ordem">2</span>
+                    <span class="nome">Stiff Máquina<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Posterior alongado com segurança">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Agachamento Sumô</h3>
-                    <p><strong>🎯 Base protetora!</strong> A base mais larga distribui melhor o peso, reduzindo a carga na coluna. Excelente para adutores e glúteos com segurança.</p>
+                <div class="exercicio">
+                    <span class="ordem">3</span>
+                    <span class="nome">Agachamento Sumô<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🎯 Base larga protege suas costas">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Cadeira Flexora</h3>
-                    <p><strong>💪 Isolamento preciso!</strong> Trabalha o posterior da coxa de forma isolada e segura. Máquina permite carga controlada sem compensações.</p>
+                <div class="exercicio">
+                    <span class="ordem">4</span>
+                    <span class="nome">Cadeira Flexora<br><small>3 x 12-15 | Descanso: 60s</small></span>
+                    <span class="dica-icon" data-dica="🌹 Isolamento seguro do posterior">💡</span>
                 </div>
-                <div class="comentario-item">
-                    <h3>Panturrilha Em Pé</h3>
-                    <p><strong>👠 Definição total!</strong> Foca no gastrocnêmio (parte superior da panturrilha). Movimento seguro que não envolve a coluna.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Princípios do Treino -->
-        <div class="dia-treino" id="principios">
-            <div class="card-header">
-                <h2>🛡️ Cuidados com Seu Corpo</h2>
-            </div>
-            <div class="exercicios">
-                <div class="comentario-item">
-                    <h3>Exercícios que Evitamos com Carinho</h3>
-                    <p>❌ <strong>Elevação Pélvica com Peso</strong> - Compressão lombar direta<br>
-                       ❌ <strong>Agachamento com Barra nas Costas</strong> - Compressão vertebral<br>
-                       ❌ <strong>Terra Tradicional</strong> - Risco extremo para hérnia<br>
-                       ❌ <strong>Good Morning</strong> - Flexão lombar perigosa<br>
-                       ❌ <strong>Hyperextension</strong> - Compressão discal<br>
-                       ❌ <strong>Abdominal Tradicional</strong> - Flexão excessiva da coluna</p>
-                </div>
-                <div class="comentario-item">
-                    <h3>Por que Escolhemos Máquinas?</h3>
-                    <p>✅ <strong>Movimento guiado</strong> - Previne técnica errada<br>
-                       ✅ <strong>Estabilização automática</strong> - Foco no músculo certo<br>
-                       ✅ <strong>Amplitude controlada</strong> - Sem excessos perigosos<br>
-                       ✅ <strong>Carga progressiva segura</strong> - Evolução sem riscos<br>
-                       ✅ <strong>Zero compensações</strong> - Músculo certo trabalhando</p>
-                </div>
-                <div class="comentario-item">
-                    <h3>Dicas de Execução Perfeita</h3>
-                    <p>🎯 <strong>Controle sempre</strong> - Movimentos lentos e controlados<br>
-                       💪 <strong>Foque no músculo</strong> - Sinta o músculo trabalhando<br>
-                       🕒 <strong>Respeite o descanso</strong> - Seu corpo precisa se recuperar<br>
-                       💧 <strong>Hidrate-se</strong> - Água é essencial para os músculos<br>
-                       🍽️ <strong>Alimente-se bem</strong> - Combustível para os resultados</p>
-                </div>
-                <div class="comentario-item">
-                    <h3>Sinais para Ficar Atenta</h3>
-                    <p>🔴 <strong>PARAR IMEDIATAMENTE</strong> se sentir:<br>
-                       - Dor aguda na lombar<br>
-                       - Formigamento nas pernas<br>
-                       - Dormência em qualquer área<br>
-                       - Dor que irradia para glúteos/pernas<br>
-                       - Pontadas nas articulações<br>
-                       <br>
-                       <strong>💝 Lembre-se: Seu bem-estar vem sempre em primeiro lugar!</strong></p>
-                </div>
-                <div class="comentario-item">
-                    <h3>Progressão Segura</h3>
-                    <p>📈 <strong>Aumente a carga gradualmente</strong> - Só quando estiver fácil<br>
-                       ⏱️ <strong>Aumente o tempo</strong> - Antes de aumentar o peso<br>
-                       🔄 <strong>Mantenha a técnica</strong> - Nunca sacrifique a forma<br>
-                       🎯 <strong>Escute seu corpo</strong> - Ele sabe o limite<br>
-                       🌟 <strong>Comemore as vitórias</strong> - Cada progresso conta!</p>
+                <div class="exercicio">
+                    <span class="ordem">5</span>
+                    <span class="nome">Panturrilha Em Pé<br><small>4 x 15-20 | Descanso: 45s</small></span>
+                    <span class="dica-icon" data-dica="👠 Panturrilhas definidas">💡</span>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Feito com muito carinho para a Bia 💝 - Seu sucesso é nossa maior alegria!</p>
+        <div class="footer-rose">🌹</div>
+        <p>Feito com carinho para a Bia - Cada rosa representa meu cuidado por você! 💝</p>
     </footer>
+
+    <!-- Modal para dicas -->
+    <div id="dicaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-rose">🌹</div>
+            <h3>💝 Dica Especial</h3>
+            <p id="dicaTexto"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
